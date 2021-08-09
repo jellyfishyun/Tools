@@ -89,14 +89,16 @@ function clone(obj) {
  */
 function getRandom(arr, num = 1) {
   let _arr = clone(arr), nowIndex, result = [];
+
   for (let i = 0; i < num; i++) {
     nowIndex = Math.floor(Math.random() * _arr.length);
     result.push(_arr[nowIndex]);
     _arr.splice(nowIndex, 1);
   }
-  return num > 1 ? result : result[0];
 
+  return num > 1 ? result : result[0];
 }
+
 /**
  * @description 降序返回数组（字符串）每个元素的出现次数
  * @param arr
